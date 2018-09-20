@@ -1,0 +1,29 @@
+// ** common font style def ** //
+//[data-dpr="1"] .grid-config, [data-dpr="1"] .global{
+//    font-size: 12px;
+//}
+//[data-dpr="2"] .grid-config, [data-dpr="2"] .global{
+//    font-size: 24px;
+//}
+//[data-dpr="3"] .grid-config, [data-dpr="3"] .global{
+//    font-size: 36px;
+//}
+
+//  define less func
+// flexible divide into 10  in width
+// design mode base width 750
+// eg: base font size == 750 / 10
+@baseFontSize: 75;
+.px2rem(@name, @px) {
+    @{name}: @px / @baseFontSize rem;
+}
+
+// usage:
+// .container {
+//     .px2rem(height, 240);
+//     color: red;
+// }
+// -->  transformed：
+// .container {
+//     // height: 3.2rem;
+// }
